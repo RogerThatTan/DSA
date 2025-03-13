@@ -1,58 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-int countCompleteDayPairs(vector<int>& hours) {
-        int ans = 0;
-        for(int i=0;i<hours.size();i++){
-            for(int j=i+1;j<hours.size();j++){
-                if((hours[i]+hours[j])%24==0){
-                    ans ++;
-                }
-            }
+bool containsNearbyDuplicate(vector<int>& nums, int k) {
+    
+    unordered_set<int> window;
+
+    for(int i=0;i<nums.size();i++){
+        if(window.count(nums[i])) return true;
+        window.insert(nums[i]);
+        if(window.size()>k) {
+            window.erase(nums[i-k]);
         }
-        return ans;
+    }
+
+    return false;
 }
-int minimumOperations(vector<int>& nums) {
-        int opt = 0;
-
-        for(int i=0;i<nums.size();i++){
-            if(nums[i]%3!=0){
-                if((nums[i]+1)%3==0 ||(nums[i]-1)%3==0 ) opt++;
-            }
-        }
-        return opt;
-}
-
-double minimumAverage(vector<int>& nums) {
-        vector<double>avg;
-        sort(nums.begin(),nums.end());
-
-        int left = 0; int right = nums.size()-1;
-        while(left<right){
-            avg.push_back((nums[left]+nums[right])/2.0);
-            left++;
-            right--;
-        }
-
-        return *min_element(avg.begin(),avg.end());
-
-}
-
-
-
 int main(){
-
-  int t;
-  cin>>t;
-  int ans=0;
-
-  while(t--){
-    int p,v,t;
-    cin>>p>>v>>t;
-    if((p+v+t)>=2){
-        ans++;
-  }
-  }
-
-    cout<<ans<<endl;
+    vector<int> arr={1,2,3,1,2,3};
+    int k=2;
+    cout<<containsNearbyDuplicate(arr,k)<<endl;
     return 0;
 }
