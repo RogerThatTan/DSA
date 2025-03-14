@@ -26,7 +26,7 @@ void printVector(vector<int> &arr, int n)
 
 int main()
 {
-    vector<int> arr = {1, 2, 4, 3, 5, 6, 7};
+    vector<int> arr = {0, 2, 4, 3, 5, 6, 7};
     int n = arr.size();
     insertionSort(arr, n);
     printVector(arr, n);
