@@ -1,6 +1,6 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-//brute force
+// brute force
 
 // int maxArea(vector<int>& height) {
 //     int n=height.size();
@@ -18,31 +18,33 @@ using namespace std;
 //     return maxWater;
 // }
 
-//Optimal approach 
-int maxArea(vector<int>& height) {
-    int n  = height.size();
-    int left =0,right=n-1,ans=0;
-    while(left<right){
-        int width = right-left;
-        int ht = min(height[left],height[right]);
+// Optimal approach
+int maxArea(vector<int> &height)
+{
+    int n = height.size();
+    int left = 0, right = n - 1, ans = 0;
+    while (left < right)
+    {
+        int width = right - left;
+        int ht = min(height[left], height[right]);
         int area = width * ht;
-        ans = max(ans,area);
-        if(height[left]<height[right]){
+        ans = max(ans, area);
+        if (height[left] < height[right])
+        {
             left++;
         }
-        else{
+        else
+        {
             right--;
         }
     }
     return ans;
 }
 
-
-
-int main(){
-    vector<int> vec = {1,8,6,2,5,4,8,3,7};
-    cout<<maxArea(vec)<<endl;
-
+int main()
+{
+    vector<int> vec = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+    cout << maxArea(vec) << endl;
 
     return 0;
 }
