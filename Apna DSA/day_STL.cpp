@@ -111,5 +111,20 @@ int main(){
 
     //STACK
     
+    stack<int>s;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    
+
+    stack<int>s2;
+    s2.swap(s);
+    cout<<"Size: "<<s2.size()<<endl;
+
+    while(!s.empty()){
+        cout<<"Top: "<<s.top()<<endl;
+        s.pop();
+    }
+    cout<<endl;
     return 0;
 }
