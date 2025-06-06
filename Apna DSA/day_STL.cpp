@@ -1,5 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+bool compartor(pair<int,int>p1,pair<int,int>p2){
+    if(p1.second<p2.second) return true;
+    if(p1.second>p2.second) return false;
+    if(p1.first<p2.first) return true;
+    else return false;
+}
+
+
 int main(){
 
     // vector<int> vec;
@@ -237,23 +246,61 @@ int main(){
 // }
  
 //MultiSet
-multiset<int> s;
-s.insert(1);
-s.insert(2);
-s.insert(3);
-s.insert(4);
-s.insert(4);
-s.insert(6);
+// multiset<int> s;
+// s.insert(1);
+// s.insert(2);
+// s.insert(3);
+// s.insert(4);
+// s.insert(4);
+// s.insert(6);
 
-cout<<"Lower Bound: "<<*(s.lower_bound(4))<<endl;
-cout<<"Upper Bound: "<<*(s.upper_bound(4))<<endl;
+// cout<<"Lower Bound: "<<*(s.lower_bound(4))<<endl;
+// cout<<"Upper Bound: "<<*(s.upper_bound(4))<<endl;
 
 
-cout<<s.size()<<endl;
-for(auto val:s){
-    cout<<val<<" ";
-}
+// cout<<s.size()<<endl;
+// for(auto val:s){
+//     cout<<val<<" ";
+// }
  
+//Array Sort
+
+    // int arr[5] = {3,7,2,5,1};
+    // vector<pair<int,int>> vec = {{3,1},{2,1},{7,1},{5,2}};
+    // sort(vec.begin(),vec.end(),compartor);
+    // for(auto p : vec){
+    //     cout<<p.first<<" "<<p.second<<endl;
+    // }
+
+
+    //Reverse
+    // vector<int> vec = {1,2,3,4,5};
+    // reverse(vec.begin(),vec.end());
+    // for(auto p : vec){
+    //     cout<<p<<" ";
+    //  }
+     
+    //next permutation
+    // string vec = "abc";
+    // next_permutation(vec.begin(),vec.end());
+    // cout<<vec<<endl;
+
+    //min max
+    // cout<<max(4,5)<<" "<<min(6,10)<<endl;
+
+    //swap
+    // int a=5, b=10;
+    // swap(a,b);
+    // cout<<"a = "<<a<<" b = "<<b<<endl;
+
+    //Max and Min Element
+
+    vector<int> vec = {1,2,3,4,5};
+    cout<<*(max_element(vec.begin(),vec.end()))<<endl;
+    for(auto p : vec){
+        cout<<p<<" ";
+     }
+
 
     return 0;
 }
