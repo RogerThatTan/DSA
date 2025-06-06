@@ -111,20 +111,149 @@ int main(){
 
     //STACK
     
-    stack<int>s;
-    s.push(1);
-    s.push(2);
-    s.push(3);
+    // stack<int>s;
+    // s.push(1);
+    // s.push(2);
+    // s.push(3);
     
 
-    stack<int>s2;
-    s2.swap(s);
-    cout<<"Size: "<<s2.size()<<endl;
+    // stack<int>s2;
+    // s2.swap(s);
+    // cout<<"Size: "<<s2.size()<<endl;
 
-    while(!s.empty()){
-        cout<<"Top: "<<s.top()<<endl;
-        s.pop();
-    }
-    cout<<endl;
+    // while(!s.empty()){
+    //     cout<<"Top: "<<s.top()<<endl;
+    //     s.pop();
+    // }
+    // cout<<endl;
+
+
+    //Queue
+//     queue<int>q;
+//    q.push(1);
+//    q.push(2);
+//   q.push(3);
+    
+
+//     while(!q.empty()){
+//         cout<<q.front()<<" ";
+//         q.pop();
+//     }
+//     cout<<endl;
+
+    //Priority_Queue
+    // priority_queue<int>q;
+    // q.push(5);
+    // q.push(3);
+    // q.push(10);
+    // q.push(2);
+    // q.push(1);
+
+    // while(!q.empty()){
+    //     cout<<q.top()<<" ";
+    //     q.pop();
+    // }
+
+    // priority_queue<int,vector<int>,greater<int>>q;
+    // q.push(5);
+    // q.push(3);
+    // q.push(10);
+    // q.push(2);
+    // q.push(1);
+
+    // while(!q.empty()){
+    //     cout<<q.top()<<" ";
+    //     q.pop();
+    // }
+
+    //MAP
+
+    // map<string,int> m;
+    // m["tv"] =100;
+    // m["laptop"] =100;
+    // m["headphones"] =50;
+    // m.insert({"kola",2});
+    // m.emplace("dal",2);
+    // m.erase("kola");
+    // for(auto p:m){
+    //     cout<<p.first<<" "<<p.second<<endl;
+    // }
+
+    // cout<<"Count= "<<m.count("laptop")<<endl;
+
+    // if(m.find("camera") !=m.end()){
+    //     cout<<"found"<<endl;
+    // }else{
+    //     cout<<"not found"<<endl;
+    // }
+
+
+
+    //MultiMap
+
+    // multimap<string,int> m;
+    
+    // m.emplace("dal",2);
+    // m.emplace("dal",2);
+    // m.emplace("dal",2);
+    // m.emplace("dal",2);
+  
+    // m.erase("dal");
+    // for(auto p:m){
+    //     cout<<p.first<<" "<<p.second<<endl;
+    // }
+
+    //Unordered Map
+    
+    // unordered_map<string,int> m;
+    
+    // m.emplace("dal",2);
+    // m.emplace("kola",2);
+    // m.emplace("murgi",2);
+    // m.emplace("bhaat",2);
+  
+    // m.erase("dal");
+    // for(auto p:m){
+    //     cout<<p.first<<" "<<p.second<<endl;
+    // }
+
+//SET
+
+// set<int> s;
+// s.insert(1);
+// s.insert(2);
+// s.insert(3);
+// s.insert(4);
+// s.insert(5);
+// s.insert(6);
+
+// cout<<"Lower Bound: "<<*(s.lower_bound(4))<<endl;
+// cout<<"Upper Bound: "<<*(s.upper_bound(4))<<endl;
+
+
+// cout<<s.size()<<endl;
+// for(auto val:s){
+//     cout<<val<<" ";
+// }
+ 
+//MultiSet
+multiset<int> s;
+s.insert(1);
+s.insert(2);
+s.insert(3);
+s.insert(4);
+s.insert(4);
+s.insert(6);
+
+cout<<"Lower Bound: "<<*(s.lower_bound(4))<<endl;
+cout<<"Upper Bound: "<<*(s.upper_bound(4))<<endl;
+
+
+cout<<s.size()<<endl;
+for(auto val:s){
+    cout<<val<<" ";
+}
+ 
+
     return 0;
 }
